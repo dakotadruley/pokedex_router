@@ -42,7 +42,7 @@ export default class Home extends Component {
            <ul>
                {
                 this.state.pokes.map(poke =>
-                <Link to={`pokes/${poke.pokemon}`}>
+                <Link to={`Detail/${poke._id}`}>
                     <PokeItem poke={poke} />
                 </Link>)
                 }

@@ -11,16 +11,16 @@ export default class PokeItem extends React.Component {
             weight,
             url_image,
         } = poke;
-
+        
       return (
           <>
-          { poke.name
+          { poke.pokemon
           ? <div>
               <p>name: { pokemon }</p>
               <p>type: `${ type_1 } / ${ type_2 }`</p>
               <p>height: { height }</p>
               <p>weight: { weight }</p>
-              <p><img src={ url_image } alt={ poke.name }/></p>
+              <p><img src={ url_image } alt={ poke.pokemon }/></p>
           </div>
           : <img src='' alt='loading'/>
         }

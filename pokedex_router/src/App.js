@@ -12,6 +12,7 @@ import Detail from './Detail.js';
 export default class App extends Component {
   render() {
     return (
+      <>
       <Router>
         <div>
           <h1>Pokédex</h1>
@@ -22,15 +23,15 @@ export default class App extends Component {
             </ul>
           </nav>
           <Switch>
-            {/* <Route /> add exact paths */}
-            <Route />
-            <Route />
-            <Route />
+            <Route exact path='/:pokemon?' component={Home}/>
+            <Route exact path='/About' component={About} />
+            <Route exact path='/Detail/:pokeId' component={Detail} />
           </Switch>
         </div>
       </Router>
-    )
+      </>
+    );
   }
 }
 
-
+// : and url means that we are setting params for the path and in the compount.

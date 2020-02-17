@@ -7,20 +7,17 @@ export default class Detail extends Component {
 
     async componentDidMount() {
         const data = await getPoke(this.props.match.params.pokeId);
+        if (data.body) {
 
-        if (data.body.results) {
-
-            this.setState({ poke: data.body.results[0] })
+            this.setState({ poke: data.body })
         }
     }
 
     render() {
         const { poke } = this.state;
-
         return (
             <PokeItem poke={ poke } />
         );
     }
 }
 
-// _id: "5cef3501ef6005a77cd4fd16" => getting the poke id
