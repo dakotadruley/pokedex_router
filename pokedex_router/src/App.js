@@ -17,14 +17,14 @@ export default class App extends Component {
         <div>
           <h1>Pokédex</h1>
           <nav>
-            <ul>
-              <li><Link to='/'>Home</Link></li><span> </span>
-              <li><Link to='/About'>About</Link></li>
+            <ul className='navBar'>
+              <button className='button'><li><Link to='/'><strong className='navtext'>Home</strong></Link></li></button><span> </span>
+              <button className='button'><li><Link to='/About'><strong className='navtext'>About</strong></Link></li></button>
             </ul>
           </nav>
           <Switch>
-            <Route exact path='/:pokemon?' component={Home}/>
             <Route exact path='/About' component={About} />
+            <Route exact path='/:pokemon?' component={Home}/>
             <Route exact path='/Detail/:pokeId' component={Detail} />
           </Switch>
         </div>
@@ -35,3 +35,5 @@ export default class App extends Component {
 }
 
 // : and url means that we are setting params for the path and in the compount.
+
+// option up to move item

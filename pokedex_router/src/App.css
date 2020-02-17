@@ -1,3 +1,13 @@
+body {
+  font-family: monospace;
+  background-color: linen;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -5,5 +15,98 @@ ul {
 }
 
 li {
-  display: inline;
+  list-style: none;
+}
+
+td {
+  font-size: 15px;
+  display: inline-block;
+  border-top: 5px solid black;
+  padding: 15px;
+  text-align: left;
+}
+
+.lastRow {
+  border-bottom: 5px solid black;
+}
+
+.poke {
+  max-width: 400px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: black;
+  margin: 1em;
+  padding: 10px;
+  box-shadow: 5px 10px steelblue;
+  background-color: rgba(114, 158, 193, 0.618);
+  color: black;
+  text-decoration: black underline;
+}
+
+.pokeContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.imageContainer {
+  text-align: center;
+}
+
+#pokeHeader {
+  font-size: 25px;
+}
+
+.imageSize {
+  width: 250px;
+}
+
+.pokes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.searchDiv {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.button {
+  background-color: steelblue;
+  height: 2.5em;
+  width: 6em;
+  border: 0.25em solid black;
+  font-family: monospace;
+}
+
+/* .pageDiv {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+} */
+
+/* .pageNumbers {
+  margin: 0.25em;
+  font-weight: bolder;
+} */
+
+#search {
+  border: 0.25em solid black;
+  height: 20px;
+  width: 15em;
+} 
+
+nav {
+display: flex;
+align-content: center;
+justify-content: center;
+}
+
+.navtext {
+  color: black;
+  text-decoration: underline black;
 }

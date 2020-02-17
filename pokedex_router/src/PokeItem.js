@@ -15,13 +15,21 @@ export default class PokeItem extends React.Component {
       return (
           <>
           { poke.pokemon
-          ? <div>
-              <p>name: { pokemon }</p>
-              <p>type: `${ type_1 } / ${ type_2 }`</p>
-              <p>height: { height }</p>
-              <p>weight: { weight }</p>
-              <p><img src={ url_image } alt={ poke.pokemon }/></p>
-          </div>
+          ? <li className='poke'>
+            <h2 id='pokeHeader'>{ pokemon }</h2>
+              <table>
+                <tr>
+                  <td>type: { type_1 } / { type_2 }</td>
+                </tr>
+                <tr>
+                  <td>height: { height }</td>
+                  <td>weight: { weight }</td>
+                </tr>
+                </table>
+                <div className='imageContainer'>
+                  <img className='imageSize'src={ url_image } alt={ poke.pokemon }/>
+              </div>
+          </li>
           : <img src='' alt='loading'/>
         }
         </>

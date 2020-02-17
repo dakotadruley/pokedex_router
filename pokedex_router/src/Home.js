@@ -39,7 +39,7 @@ export default class Home extends Component {
             handleSearch={this.handleSearch}
             handleChange={this.handleChange}
             />
-           <ul>
+           <ul className='pokeContainer'>
                {
                 this.state.pokes.map(poke =>
                 <Link to={`Detail/${poke._id}`}>

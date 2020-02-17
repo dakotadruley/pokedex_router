@@ -3,12 +3,16 @@ import React, { Component } from 'react'
 export default class Search extends Component {
     render() {
         return (
+            <div className='searchDiv'>
             <form onSubmit={this.props.handleSearch}>
+                <label for='search'><strong>Search: </strong></label>
                 <input
-                value={this.props.searchQuery}
+                id='search'
+                value={this.props.searchQuery || ''}
                 onChange={this.props.handleChange}/>
-                <button>Search</button>
+              <span> </span><button className='button'><strong>Search</strong></button>
             </form>
+            </div>
         )
     }
 }

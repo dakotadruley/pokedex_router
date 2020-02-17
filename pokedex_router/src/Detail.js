@@ -16,7 +16,9 @@ export default class Detail extends Component {
     render() {
         const { poke } = this.state;
         return (
-            <PokeItem poke={ poke } />
+            <ul className='pokeContainer'>
+                <PokeItem poke={ poke } />
+            </ul>
         );
     }
 }
