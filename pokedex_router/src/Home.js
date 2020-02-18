@@ -37,6 +37,16 @@ export default class Home extends Component {
         this.setState({ searchType: e.target.value });
     }
 
+    async componentWillUpdate(nextProps) {
+    const param = this.props.match.params.pokemon;
+    let nextParam = nextProps.match.params.pokemon;
+    if (param !== nextParam && !nextParam) {
+       this.setState({ 
+           characters: [],
+           searchQuery: ''
+        })}
+    }
+
     render() {
       return (
           <>
