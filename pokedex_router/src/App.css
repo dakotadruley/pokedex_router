@@ -133,6 +133,18 @@ justify-content: center;
   color: black;
 }
 
-#detailHeader {
+#aboutHeader {
   text-align: center;
 }
+
+#aboutContainer {
+  margin: 2em;
+  padding: 10px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: black;
+  background-color: rgba(114, 158, 193, 0.618);
+  box-shadow: 5px 10px steelblue;
+}
+
+
