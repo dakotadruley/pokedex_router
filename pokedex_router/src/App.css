@@ -30,6 +30,12 @@ td {
   border-bottom: 5px solid black;
 }
 
+
+#pokeHeader {
+  font-size: 25px;
+  text-decoration: black underline;
+}
+
 .poke {
   max-width: 400px;
   border-radius: 15px;
@@ -40,7 +46,6 @@ td {
   box-shadow: 5px 10px steelblue;
   background-color: rgba(114, 158, 193, 0.618);
   color: black;
-  text-decoration: black underline;
 }
 
 .pokeContainer {
@@ -52,10 +57,6 @@ td {
 
 .imageContainer {
   text-align: center;
-}
-
-#pokeHeader {
-  font-size: 25px;
 }
 
 .imageSize {
@@ -109,4 +110,29 @@ justify-content: center;
 .navtext {
   color: black;
   text-decoration: underline black;
+}
+
+#detailPoke {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+#detailTable {
+  margin-top: 10em;
+  max-width: 290px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: black;
+  margin: 1em;
+  padding: 10px;
+  box-shadow: 5px 10px steelblue;
+  background-color: rgba(114, 158, 193, 0.618);
+  color: black;
+}
+
+#detailHeader {
+  text-align: center;
 }

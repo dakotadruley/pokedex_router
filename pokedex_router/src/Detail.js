@@ -15,10 +15,40 @@ export default class Detail extends Component {
 
     render() {
         const { poke } = this.state;
+        const {
+            ability_1,
+            height,
+            weight,
+            attack,
+            defense,
+            hp,
+            speed,
+        } = poke;
+        console.log(poke);
         return (
-            <ul className='pokeContainer'>
-                <PokeItem poke={ poke } />
-            </ul>
+            <div id='detailPoke'>
+                <ul className='pokeContainer'>
+                    <PokeItem poke={ poke } />
+                </ul>
+                <table id='detailTable'>
+                    <h2 id='detailHeader'>Pokémon Detail Stats</h2>
+                    <tr>
+                    <td><strong>ability:</strong> { ability_1 }</td>
+                    </tr>
+                    <tr>
+                        <td><strong>height:</strong> { height }</td>
+                        <td><strong>weight:</strong> { weight }</td>
+                    </tr>
+                    <tr>
+                        <td><strong>attack:</strong> { attack }</td>
+                        <td><strong>defense:</strong> { defense }</td>
+                    </tr>
+                    <tr>
+                        <td><strong>hp:</strong> { hp }</td>
+                        <td><strong>speed:</strong> { speed }</td>
+                    </tr>
+                </table>
+            </div>
         );
     }
 }
