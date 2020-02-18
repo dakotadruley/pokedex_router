@@ -11,6 +11,9 @@ export default class Search extends Component {
                 value={this.props.searchQuery || ''}
                 onChange={this.props.handleChange}/>
               <span> </span><button className='button'><strong>Search</strong></button>
+              <div>
+                  <label><strong>Type: </strong><input type='radio' name='searchType' value='type' onClick={this.props.handleType}></input></label>
+              </div>
             </form>
             </div>
         )

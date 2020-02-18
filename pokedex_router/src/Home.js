@@ -8,6 +8,7 @@ export default class Home extends Component {
     state = {
         searchQuery: this.props.match.params.pokemon,
         pokes: [],
+        searchType: 'pokemon',
     }
 
     async componentDidMount() {
@@ -16,12 +17,13 @@ export default class Home extends Component {
 
             this.setState({ pokes: data.body.results, })
         }
+
     }
 
     handleSearch = async (e) => {
         e.preventDefault();
 
-        const data = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex/?pokemon=${this.state.searchQuery}`)
+        const data = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex/?${this.state.searchType}=${this.state.searchQuery}`)
 
         this.setState({
             pokes: data.body.results, })
@@ -31,6 +33,10 @@ export default class Home extends Component {
 
     handleChange = (e) => this.setState({ searchQuery: e.target.value })
 
+    handleType = (e) => {
+        this.setState({ searchType: e.target.value });
+    }
+
     render() {
       return (
           <>
@@ -38,6 +44,7 @@ export default class Home extends Component {
             searchQuery={this.state.searchQuery}
             handleSearch={this.handleSearch}
             handleChange={this.handleChange}
+            handleType={this.handleType}
             />
            <ul className='pokeContainer'>
                {
